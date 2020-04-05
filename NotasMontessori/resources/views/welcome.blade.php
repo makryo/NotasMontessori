@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -61,6 +62,26 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            body {
+                background: linear-gradient(-45deg, #fdfdfd, #a9e9f3, #6acff3, #f5f5f5);
+                background-size: 400% 400%;
+                animation: gradient 15s ease infinite;
+            }
+
+            @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+            }
         </style>
     </head>
     <body>
@@ -81,18 +102,17 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    <img src="https://lh3.googleusercontent.com/eoKk1Df-VfTAwDX3SMM4i8BJApp6ZjxXfLzg95tuUd2AjG8bDj773N0x46PrITTHhgMmKQbUvJWaJr9Cb_KdA2DMXRlhq8mm5SBQlEG20uCJ8dE8aJqIh_1_w6V6XdhEv0Ov9In8TaT7hh1tMGGiFlhyRReETSwB3rFU5klPTCSB_Eq6CUWs6BYqZkF9envF85HKKvyIiB2bLHj19jIEyOlrf2ajREn32ffwKRkk3JVomwTn0fSrGTTm0tX7i5v0lJlJ-uzLq7zRSP5mnjxY1pR7nV1jGWteLaXDWwSSXyefrS4TarDe0EDfDdf53Q25BHqPDSc61QPY_AOo1hF0f5-2E0CD5wICbDj8msa6vvT4s_-jWbYCx42Qgmwil44yOx0hfGCDbHaTUR4741vX3v5hPXM0SYfl7-ZqtSYSlnCm98SYyxNpINCyw0KiAmbjPdC6WDtvvfnpHstevf0eqxxD5o69dQ1k22X569_0I_vBePOukHxd5fDyyEYlxFLespyJNt7nJjGX8MFsuTZRHMAdb-EmtwxiEPpb6kLAyvTnLdc8ZwHwrpu-vzxEx58HrTE02opRQwQhb45wYJGuG83dX2HKVJiHVYrC8bKHFPf1rwfkUiVAqTgHX1TikrXiys44-qLBoqMMbh7B9WnarFE7QW_1eNS5qtZpaUKaVw0Iyw6UI6lGNa5iLWd4ZQ=w204-h194-no" alt="logo">
+                    <br>
+                    Colegio Montessori
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://www.facebook.com/colegiomontessoriediver">Facebook</a>
+                    <a href="https://laracasts.com">Youtube</a>
+                    <a href="https://laravel-news.com">Twitter</a>
+                    <a href="https://blog.laravel.com">Instagram</a>
+                    <a href="https://nova.laravel.com">GooglePlus</a>
                 </div>
             </div>
         </div>
