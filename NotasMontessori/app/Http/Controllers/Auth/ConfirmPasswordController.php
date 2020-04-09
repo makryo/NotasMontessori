@@ -26,7 +26,7 @@ class ConfirmPasswordController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+     protected $redirectTo = '/principal';
 
     /**
      * Create a new controller instance.

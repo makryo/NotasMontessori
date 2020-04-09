@@ -14,7 +14,7 @@ class CreateTercerBimestresTable extends Migration
     public function up()
     {
         Schema::create('tercer_bimestres', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
 
             $table->bigInteger('alumno_id')->unsigned();
             $table->foreign('alumno_id')->references('id')->on('alumnos');

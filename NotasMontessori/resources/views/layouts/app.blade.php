@@ -20,6 +20,9 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../skeleton.css">
+
     <style type="text/css">
     body {
         background: linear-gradient(-45deg, #fdfdfd, #a9e9f3, #6acff3, #f5f5f5);
@@ -40,6 +43,7 @@
             background-position: 0% 50%;
         }
     }
+
     </style>
     
 
