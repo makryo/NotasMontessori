@@ -20,7 +20,7 @@ class AlumnosController extends Controller
 
     public function index()
     {
-        //
+        return view('Alumnos/inscripcion');
     }
 
     /**

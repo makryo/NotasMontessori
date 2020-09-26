@@ -6,7 +6,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Alumno extends Model
 {
-    protected $fillable = ['id','nombre_completo', 'grado', 'cod_montessori', 'cod_mineduc'];
+    protected $fillable = [
+        'id',
+        'nombre_comp', 
+        'grado', 
+        'cod_montessori', 
+        'cod_mineduc', 
+        'tel_alumno', 
+        'nombre_pme', 
+        'tel_pme',
+        'correo_pme',
+        'fechnac_alumno'
+    ];
 
     public function Bimenstre1()
     {

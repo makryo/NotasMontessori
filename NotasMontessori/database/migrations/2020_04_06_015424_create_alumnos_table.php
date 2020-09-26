@@ -15,10 +15,15 @@ class CreateAlumnosTable extends Migration
     {
         Schema::create('alumnos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nombre_completo');
+            $table->string('nombre_comp');
             $table->string('grado');
-            $table->string('cod_montessori');
+            $table->integer('cod_montessori');
             $table->string('cod_mineduc');
+            $table->integer('tel_alumno');
+            $table->string('nombre_pme');
+            $table->integer('tel_pme');
+            $table->string('correo_pme');
+            $table->date('fechnac_alumno');
             $table->timestamps();
         });
     }

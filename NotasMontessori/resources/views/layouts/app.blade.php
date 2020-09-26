@@ -12,16 +12,59 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script language="JavaScript" src="resources/views/java/Lunes.js"></script>
+    <script language="JavaScript">
+    function doSearch(){
+        
+        const tableReg = document.getElementById('datos');
+        const searchText = document.getElementById('searchTerm').value.toLowerCase();
+        let total = 0;
+        // Recorremos todas las filas con contenido de la tabla
+        for (let i = 1; i < tableReg.rows.length; i++) {
+        // Si el td tiene la clase "noSearch" no se busca en su cntenido
+            if (tableReg.rows[i].classList.contains("noSearch")) {continue;}
+                
+                let found = false;
+                const cellsOfRow = tableReg.rows[i].getElementsByTagName('td');
+                // Recorremos todas las celdas
+                for (let j = 0; j < cellsOfRow.length && !found; j++) {
+                const compareWith = cellsOfRow[j].innerHTML.toLowerCase();
+                // Buscamos el texto en el contenido de la celda
+                if (searchText.length == 0 || compareWith.indexOf(searchText) > -1) {
+                    found = true;
+                    total++;
+                }
+            }
+    
+            if (found) {
+                tableReg.rows[i].style.display = '';
+            } else {
+                // si no ha encontrado ninguna coincidencia, esconde la
+                // fila de la tabla
+                tableReg.rows[i].style.display = 'none';
+            }
+            }
+            // mostramos las coincidencias
+        const lastTR=tableReg.rows[tableReg.rows.length-1];
+        const td=lastTR.querySelector("td");
+        lastTR.classList.remove("hide", "red");
+        if (searchText == "") {
+            lastTR.classList.add("hide");
+        } else if (total) {
+            td.innerHTML="Se ha encontrado "+total+" coincidencia"+((total>1)?"s":"");
+        } else {
+            lastTR.classList.add("red");
+            td.innerHTML="No se han encontrado coincidencias";
+        }
+    }
+    
+    </script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="https://bootswatch.com/4/cerulean/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="../normalize.css">
-    <link rel="stylesheet" type="text/css" href="../skeleton.css">
 
     <style type="text/css">
     body {
@@ -53,9 +96,9 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-sm bg-info navbar-dark">
+        <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
             <div class="container">
-                    <img src="https://lh3.googleusercontent.com/eoKk1Df-VfTAwDX3SMM4i8BJApp6ZjxXfLzg95tuUd2AjG8bDj773N0x46PrITTHhgMmKQbUvJWaJr9Cb_KdA2DMXRlhq8mm5SBQlEG20uCJ8dE8aJqIh_1_w6V6XdhEv0Ov9In8TaT7hh1tMGGiFlhyRReETSwB3rFU5klPTCSB_Eq6CUWs6BYqZkF9envF85HKKvyIiB2bLHj19jIEyOlrf2ajREn32ffwKRkk3JVomwTn0fSrGTTm0tX7i5v0lJlJ-uzLq7zRSP5mnjxY1pR7nV1jGWteLaXDWwSSXyefrS4TarDe0EDfDdf53Q25BHqPDSc61QPY_AOo1hF0f5-2E0CD5wICbDj8msa6vvT4s_-jWbYCx42Qgmwil44yOx0hfGCDbHaTUR4741vX3v5hPXM0SYfl7-ZqtSYSlnCm98SYyxNpINCyw0KiAmbjPdC6WDtvvfnpHstevf0eqxxD5o69dQ1k22X569_0I_vBePOukHxd5fDyyEYlxFLespyJNt7nJjGX8MFsuTZRHMAdb-EmtwxiEPpb6kLAyvTnLdc8ZwHwrpu-vzxEx58HrTE02opRQwQhb45wYJGuG83dX2HKVJiHVYrC8bKHFPf1rwfkUiVAqTgHX1TikrXiys44-qLBoqMMbh7B9WnarFE7QW_1eNS5qtZpaUKaVw0Iyw6UI6lGNa5iLWd4ZQ=w204-h194-no" class="navbar-brand" style="height: 45px; width: 45px">
+                    <img src="https://mega.nz/file/iAwwFJgS#VuF4HO-AwBRs7c8R9Z0hD4OyLbFawlg0TvhIVPkhAW4" class="navbar-brand" style="height: 45px; width: 45px">
                 <a class="navbar-brand" href="{{ url('/') }}" style="color: black">
                     Colegio Montessori
                 </a>

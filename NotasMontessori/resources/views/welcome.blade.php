@@ -102,7 +102,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    <img src="https://lh3.googleusercontent.com/eoKk1Df-VfTAwDX3SMM4i8BJApp6ZjxXfLzg95tuUd2AjG8bDj773N0x46PrITTHhgMmKQbUvJWaJr9Cb_KdA2DMXRlhq8mm5SBQlEG20uCJ8dE8aJqIh_1_w6V6XdhEv0Ov9In8TaT7hh1tMGGiFlhyRReETSwB3rFU5klPTCSB_Eq6CUWs6BYqZkF9envF85HKKvyIiB2bLHj19jIEyOlrf2ajREn32ffwKRkk3JVomwTn0fSrGTTm0tX7i5v0lJlJ-uzLq7zRSP5mnjxY1pR7nV1jGWteLaXDWwSSXyefrS4TarDe0EDfDdf53Q25BHqPDSc61QPY_AOo1hF0f5-2E0CD5wICbDj8msa6vvT4s_-jWbYCx42Qgmwil44yOx0hfGCDbHaTUR4741vX3v5hPXM0SYfl7-ZqtSYSlnCm98SYyxNpINCyw0KiAmbjPdC6WDtvvfnpHstevf0eqxxD5o69dQ1k22X569_0I_vBePOukHxd5fDyyEYlxFLespyJNt7nJjGX8MFsuTZRHMAdb-EmtwxiEPpb6kLAyvTnLdc8ZwHwrpu-vzxEx58HrTE02opRQwQhb45wYJGuG83dX2HKVJiHVYrC8bKHFPf1rwfkUiVAqTgHX1TikrXiys44-qLBoqMMbh7B9WnarFE7QW_1eNS5qtZpaUKaVw0Iyw6UI6lGNa5iLWd4ZQ=w204-h194-no" alt="logo">
+                    <img src="C:\Users\Makry\OneDrive\Pictures\logo.png" alt="logo">
                     <br>
                     Colegio Montessori
                 </div>

@@ -14,8 +14,19 @@
                         </div>
                     @endif
 
-                    Hola Mundo
-                    <a href="{{ route('alumnos.create') }}">nuevo</a>
+                    Inscripciones
+                    <a href="{{ route('alumnos.create') }}">Nueva inscripcion</a>
+                    <a href="{{ route('alumnos.index') }}">Ver datos registradas</a>
+                    <br>
+
+                    Horarios
+
+                    <a href="#">Nuevo horario</a>
+                    <a href="#">Ver horarios</a>
+
+                    <br>
+
+                    
                 </div>
             </div>
         </div>
