@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Clase extends Model
+class horarios extends Model
 {
     //
 }

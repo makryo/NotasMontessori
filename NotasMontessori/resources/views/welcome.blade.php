@@ -102,7 +102,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    <img src="C:\Users\Makry\OneDrive\Pictures\logo.png" alt="logo">
+                    <img src="https://u9basq.by.files.1drv.com/y4pBJohE4SbaNuti9rV3OjwNamhdiRlPZqVzXpD7Nd9k5oaC6301kryl6JrdsqzCZc-CyH6tsa03e2PhQn6INKz3uYLnrdcqq2USSamSPRTs22KIiEBfABT5B4b8tcG5wYvmGM8VBIqrty7e9VoSVPuh21lF8S7gcDE-i10QIv1gAcyEITeLSoVXjC1ftSGyq3wGD6pxJKfMB-PRsGQzritOVSpUBGhchOiJlgLCPfl1WM/logo.png?psid=1" alt="logo">
                     <br>
                     Colegio Montessori
                 </div>

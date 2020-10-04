@@ -15,7 +15,9 @@
                     @endif
 
                     Inscripciones
-                    <a href="{{ route('alumnos.create') }}">Nueva inscripcion</a>
+                    <a href="{{ route('alumnos.create') }}"  class="btn btn-primary">Nueva inscripcion</a>
+                    <span class="glyphicon glyphicon-list-alt"></span>
+                  
                     <a href="{{ route('alumnos.index') }}">Ver datos registradas</a>
                     <br>
 

@@ -15,6 +15,7 @@
     <script language="JavaScript">
     function doSearch(){
         
+        
         const tableReg = document.getElementById('datos');
         const searchText = document.getElementById('searchTerm').value.toLowerCase();
         let total = 0;
@@ -64,7 +65,7 @@
 
     <!-- Styles -->
     <link href="https://bootswatch.com/4/cerulean/bootstrap.min.css" rel="stylesheet">
-
+    <link href="../bootstrap.min.css">
 
     <style type="text/css">
     body {
@@ -86,19 +87,17 @@
             background-position: 0% 50%;
         }
     }
-
     </style>
     
 
 
 
 </head>
-</head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
             <div class="container">
-                    <img src="https://mega.nz/file/iAwwFJgS#VuF4HO-AwBRs7c8R9Z0hD4OyLbFawlg0TvhIVPkhAW4" class="navbar-brand" style="height: 45px; width: 45px">
+                    <img src="https://u9basq.by.files.1drv.com/y4pOyxtEOoxbea7LRTl9TipfJxU2je5XxCLkwS9ky2spLV2GvoqihtZboNxacAv5dlRMblrs1uU4Hh8IpXnx77kTGacaftoMU2lp8vkt9Mq5dJpYwgm_9NwgTg4c5evzF0AmDpVhD8_rfj2CMwtnY8gdSizBNe9242_6V9YfblO3eXRmsg2_9MWHfcmP_F_uTGS4bAyOUxsZ0861PH3L3su9dx2iC5GVBQR7-mcxL2H-_U/logo.png?psid=1" class="navbar-brand" style="height: 45px; width: 45px">
                 <a class="navbar-brand" href="{{ url('/') }}" style="color: black">
                     Colegio Montessori
                 </a>
