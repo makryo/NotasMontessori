@@ -91,6 +91,8 @@ class AlumnosController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Alumno::find($id)->delete();
+        $student = Alumno::all();
+        return view('Alumnos/inscripcion', compact('student'));
     }
 }

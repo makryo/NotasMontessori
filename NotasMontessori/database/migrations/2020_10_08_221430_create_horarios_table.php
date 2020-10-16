@@ -1,0 +1,39 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateHorariosTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('horarios', function (Blueprint $table) {
+            $table->id();
+            $table->string('hora');
+            $table->string('grado');
+            $table->string('clase');
+        
+            $table->bigInteger('nom_maestro')->unsigned();
+            $table->foreign('nom_maestro')->references('id')->on('maestros');
+            
+            $table->string('dia');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('horarios');
+    }
+}

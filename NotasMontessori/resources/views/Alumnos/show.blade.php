@@ -13,16 +13,15 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <h1>Detalles</h1>
+                    <h1>Confirmar datos registrados</h1>
                     
                     <dl>
                     <div class="row">
                         <div class="col-6">
                             <dt>NombreCompleto</dt><dd>{{ $student->nombre_comp }}</dd>
-                            <dt>Grado</dt><dd>{{ $student->grado }}</dd>
                             <dt>Codigo montessori</dt><dd>{{ $student->cod_montessori }}</dd>
                             <dt>Codigo mineduc</dt><dd>{{ $student->cod_mineduc }}</dd>
-                            <dt>Telefono del alumno</dt><dd>{{ $student->tel_alumno }}</dd>
+                            <dt>Telefono del alumno</dt><dd>{{ $student->genero }}</dd>
                         </div>
 
                         <div class="col-6">
@@ -34,8 +33,8 @@
                     </div>
                     </dl>
                     <br>  
-                    <a href="/principal" type="button" class="btn btn-danger">Regresar</a>
-                    <a href="{{ route('alumnos.edit', $student->id) }}" class="boton">Editar</a>
+                    <a href="{{ route ('alumnos.index')}}" type="button" class="btn btn-warning">Regresar</a>
+                    <a href="{{ route('alumnos.edit', $student->id) }}" class="btn btn-success">Editar</a>
                 </div>
             </div>
         </div>

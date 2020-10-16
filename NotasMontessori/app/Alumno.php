@@ -8,11 +8,10 @@ class Alumno extends Model
 {
     protected $fillable = [
         'id',
-        'nombre_comp', 
-        'grado', 
+        'nombre_comp',
         'cod_montessori', 
         'cod_mineduc', 
-        'tel_alumno', 
+        'genero', 
         'nombre_pme', 
         'tel_pme',
         'correo_pme',

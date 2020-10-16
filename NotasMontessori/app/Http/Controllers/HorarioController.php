@@ -3,21 +3,24 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\horario;
 
-class ClasesController extends Controller
+class HorarioController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function index()
     {
-        //
+        return view('horarios/index');
     }
 
     /**
@@ -27,7 +30,7 @@ class ClasesController extends Controller
      */
     public function create()
     {
-        //
+        return view('horarios/create');
     }
 
     /**
@@ -38,7 +41,8 @@ class ClasesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $horari = horario::create($request->all());
+        return view('horarios/show',compact('horari'));
     }
 
     /**
@@ -49,7 +53,8 @@ class ClasesController extends Controller
      */
     public function show($id)
     {
-        //
+        $horari = horario::find($id);
+        return view('horarios/show', compact('horari'));
     }
 
     /**
@@ -60,7 +65,8 @@ class ClasesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $Edita = horario::findOrFail($id);
+        return view('horarios/edit', compact('Edita'));
     }
 
     /**
@@ -72,7 +78,9 @@ class ClasesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $horari = horario::find($id);
+        $horari -> update($request ->all());
+        return view('horarios/show', compact('horari'));
     }
 
     /**

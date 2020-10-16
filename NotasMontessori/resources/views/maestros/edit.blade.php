@@ -16,7 +16,7 @@
                     <h1>Actualizar datos</h1>
                     <div class="container">
                     
-                        <form method="post" action="{{ route('alumnos.update', $Edita->id) }}">
+                        <form method="post" action="{{ route('maestros.update', $Edita->id) }}">
 
                             @csrf
                             @method('PATCH')
@@ -24,25 +24,23 @@
 
                             <div class="row">
                                 <div class="col-6">
-                                    <input type="text" name="nombre_completo" value="{{ $Edita->nombre_comp }}" required class="form-control">
+                                    <input type="text" name="nom_comp" value="{{ $Edita->nom_comp }}" required class="form-control">
                                     <br>
-                                    <input type="number" name="cod_montessori" value="{{ $Edita->cod_montessori }}" required class="form-control">
+                                    <input type="text" name="direccion" value="{{ $Edita->direccion }}" required class="form-control">
                                     <br>
-                                    <input type="text" name="cod_mineduc" value="{{ $Edita->cod_mineduc }}" required class="form-control">
+                                    <input type="email" name="email" value="{{ $Edita->email }}" required class="form-control">
                                     <br>
-                                    <input type="text" name="genero" value="{{ $Edita->genero }}" required class="form-control">
+                                    <input type="number" name="dpi" value="{{ $Edita->dpi }}" required class="form-control">
                                     <br>
                                 </div>
 
                                 <div class="col-6">
-                                    <input type="text" name="nombre_pme" value="{{ $Edita->nombre_pme }}" required class="form-control">
+                                    <input type="date" name="fechnac" value="{{ $Edita->fechnac }}" required class="form-control">
                                     <br>
-                                    <input type="number" name="tel_pme" value="{{ $Edita->tel_pme }}" required class="form-control">
+                                    <input type="text" name="genero" value="{{ $Edita->genero }}" required class="form-control">
                                     <br>
-                                    <input type="text" name="correo_pme" value="{{ $Edita->correo_pme }}" required class="form-control">
-                                    <br>
-                                    <input type="date" name="fechnac_alumno" value="{{ $Edita->fechnac_alumno }}" required class="form-control">
-                                    <br>
+                                    <input type="number" name="num_tel" value="{{ $Edita->num_tel}}" required class="form-control">
+                                    <br>                                    
                                 </div>
                             </div>
                             <input type="submit" value="Guardar" class="btn btn-success">

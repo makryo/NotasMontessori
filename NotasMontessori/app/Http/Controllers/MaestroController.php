@@ -3,21 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\maestro;
 
-class ClasesController extends Controller
+class MaestroController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function index()
     {
-        //
+        return view('maestros/index');
     }
 
     /**
@@ -27,7 +29,7 @@ class ClasesController extends Controller
      */
     public function create()
     {
-        //
+        return view('maestros/create');
     }
 
     /**
@@ -38,7 +40,8 @@ class ClasesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $teacher = maestro::create($request->all());
+        return view('maestros/show',compact('teacher'));
     }
 
     /**
@@ -49,7 +52,8 @@ class ClasesController extends Controller
      */
     public function show($id)
     {
-        //
+        $teacher = maestro::find($id);
+        return view('maestros/show', compact('teacher'));
     }
 
     /**
@@ -60,7 +64,8 @@ class ClasesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $Edita = maestro::findOrFail($id);
+        return view('maestros/edit', compact('Edita'));
     }
 
     /**
@@ -72,7 +77,9 @@ class ClasesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $teacher = maestro::find($id);
+        $teacher -> update($request ->all());
+        return view('maestros/show', compact('teacher'));
     }
 
     /**
@@ -83,6 +90,8 @@ class ClasesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        maestro::find($id)->delete();
+        $teacher = maestro::all();
+        return view('maestros/index', compact('teacher'));
     }
 }

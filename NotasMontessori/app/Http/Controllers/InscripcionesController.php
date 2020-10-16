@@ -3,21 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\inscripciones;
 
-class ClasesController extends Controller
+class InscripcionesController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
-        //
+        return view('inscripciones/inscripcion');
     }
 
     /**
@@ -27,7 +29,7 @@ class ClasesController extends Controller
      */
     public function create()
     {
-        //
+        return view('inscripciones/create');
     }
 
     /**
@@ -38,7 +40,8 @@ class ClasesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $ingreso = inscripciones::create($request->all());
+        return view('inscripciones/show',compact('ingreso'));
     }
 
     /**
@@ -49,7 +52,8 @@ class ClasesController extends Controller
      */
     public function show($id)
     {
-        //
+        $ingreso = inscripciones::find($id);
+        return view('inscripciones/show', compact('ingreso'));
     }
 
     /**
@@ -60,7 +64,8 @@ class ClasesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $Edita = inscripciones::findOrFail($id);
+        return view('inscripciones/edit', compact('Edita'));
     }
 
     /**
@@ -72,7 +77,9 @@ class ClasesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $ingreso = inscripciones::find($id);
+        $ingreso -> update($request ->all());
+        return view('inscripciones/show', compact('ingreso'));
     }
 
     /**

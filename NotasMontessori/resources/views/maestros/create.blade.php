@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Nueva Inscripcion</div>
+                <div class="card-header">Nuevo maestro</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,60 +13,55 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <h1>Formulario de inscripcion</h1>
+                    <h1>Formulario para nuevo maestro</h1>
                     <div class="container">
                         
 
-                        <form method="post" action="{{ route('alumnos.store') }}">
+                        <form method="post" action="{{ route('maestros.store') }}">
                             {{ csrf_field() }}
 
                             <div class="row">
                                 <div class="col-6">
                                     <br>
-                                    <label>NombreCompleto</label>
+                                    <label>Nombre Completo</label>
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" name="nombre_comp" required>
+                                        <input type="text" class="form-control" name="nom_comp" required>
                                     </div>
                                     <br>
-                                    <label>Cod_montessori</label>
+                                    <label>Direccion</label>
                                     <div class="input-group mb-3">
-                                        <input type="number" class="form-control" name="cod_montessori" required>
+                                        <input type="text" class="form-control" name="direccion" required>
                                     </div>
                                     <br>
-                                    <label>Cod_mineduc</label>
+                                    <label>Correo</label>
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" name="cod_mineduc" required>
+                                        <input type="email" class="form-control" name="email" required>
                                     </div>
                                     <br>
-                                    <label>Genero</label>
-                                        <div class="input-group mb-3">
-                                            <input type="text" class="form-control" name="genero" required>
-                                        </div>
+                                    <label>Dpi</label>
+                                    <div class="input-group mb-3">
+                                        <input type="number" class="form-control" name="dpi" required>
+                                    </div>
+                                    <br>
                                 </div>
 
                                 <div class="col-6">
                                 <br>
-                                    <label>Nombre del padre, madre o encargado</label>
-                                        <div class="input-group mb-3">
-                                            <input type="text" class="form-control" name="nombre_pme" required>
-                                        </div>
-                                    <br>
-                                    <label>Numero de telefono del padre, madre o encargado</label>
-                                        <div class="input-group mb-3">
-                                            <input type="number" class="form-control" name="tel_pme" required>
-                                        </div>
-
-                                        <br>
-                                    <label>Correo electronico del padre</label>
-                                        <div class="input-group mb-3">
-                                            <input type="email" class="form-control" name="correo_pme" required>
-                                        </div>
-
-                                        <br>
                                     <label>Fecha de nacimiento</label>
                                         <div class="input-group mb-3">
-                                            <input type="date" class="form-control" name="fechnac_alumno" required>
+                                            <input type="date" class="form-control" name="fechnac" required>
                                         </div>
+                                    <br>
+                                    <label>genero</label>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" name="genero" required>
+                                        </div>
+
+                                        <br>
+                                    <label>Numero de telefono del maestro</label>
+                                        <div class="input-group mb-3">
+                                            <input type="number" class="form-control" name="num_tel" required>
+                                        </div> 
                                 </div>
                             </div>
                             <br>

@@ -89,12 +89,12 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}">Montessori</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}">Iniciar sesion</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}">Registrarse</a>
                         @endif
                     @endauth
                 </div>
@@ -109,10 +109,8 @@
 
                 <div class="links">
                     <a href="https://www.facebook.com/colegiomontessoriediver">Facebook</a>
-                    <a href="https://laracasts.com">Youtube</a>
-                    <a href="https://laravel-news.com">Twitter</a>
-                    <a href="https://blog.laravel.com">Instagram</a>
-                    <a href="https://nova.laravel.com">GooglePlus</a>
+                    <a href="https://www.youtube.com/user/MontessorlEdlver">Youtube</a>
+                    <a href="https://www.instagram.com/explore/locations/1001259010/colegio-montessori-y-ediver/?hl=es-la">Instagram</a>
                 </div>
             </div>
         </div>
